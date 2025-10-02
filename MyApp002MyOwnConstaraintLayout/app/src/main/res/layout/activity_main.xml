@@ -7,87 +7,117 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="RANDOOM"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="257dp" />
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
+        android:id="@+id/etSurname"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="15dp" />
+        android:hint="Surname"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        android:layout_marginTop="8dp"/>
 
     <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Surname"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        tools:layout_editor_absoluteY="60dp" />
-
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:text="Phone num"
+        android:hint="Phone number"
         android:inputType="phone"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-        tools:layout_editor_absoluteX="11dp" />
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etSurname"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Order"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etAddress"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnProcess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Proces"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintEnd_toStartOf="@id/btnDelete"
+        app:layout_constraintTop_toBottomOf="@id/etOrder"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        app:layout_constraintStart_toEndOf="@id/btnProcess"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintTop_toTopOf="@id/btnProcess"
+        android:layout_marginStart="8dp"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="333dp" />
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/btnProcess"
+        android:layout_marginTop="12dp"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvRecapTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
         android:text="Rekapitulace"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
-        tools:layout_editor_absoluteX="165dp" />
-
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Adress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
-        tools:layout_editor_absoluteX="11dp" />
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        android:layout_marginTop="24dp"/>
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="309dp"
-        android:layout_height="204dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="464dp" />
-
-    <EditText
-        android:id="@+id/editTextText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Order"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
-        tools:layout_editor_absoluteX="11dp" />
-
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/tvRecapTitle"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
