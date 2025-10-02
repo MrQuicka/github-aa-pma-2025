@@ -13,40 +13,44 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Objednávka kola"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Objednávka kola" />
 
 
     <TextView
         android:id="@+id/tvOrderTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jaké kolo chcete objednat"
         android:layout_marginTop="75dp"
-        app:layout_constraintTop_toTopOf="@id/toolbar"
+        android:text="Jaké kolo chcete objednat"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/toolbar"
+        tools:layout_editor_absoluteX="95dp" />
 
     <TextView
         android:id="@+id/tvColorPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1. Vyberte barvu:"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/tvOrderTitle"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="1. Vyberte barvu:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOrderTitle" />
 
     <RadioGroup
         android:id="@+id/rgColour"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/tvColorPrompt"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/tvColorPrompt">
 
         <RadioButton
             android:id="@+id/rbRed"
@@ -71,60 +75,61 @@
         android:id="@+id/tvAccessoriesPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2. Doplňková výbava:"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/rgColour"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="2. Doplňková výbava:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgColour" />
 
     <CheckBox
         android:id="@+id/cbFork"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lepší Vidlice"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/tvAccessoriesPrompt"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Lepší Vidlice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAccessoriesPrompt" />
 
     <CheckBox
         android:id="@+id/cbSaddle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lepší Sedlo"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/cbFork"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Lepší Sedlo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbFork" />
 
     <CheckBox
         android:id="@+id/cbWheels"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lepší Kola"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/cbSaddle"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="Lepší Kola"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbSaddle" />
 
     <Button
         android:id="@+id/btnOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Objednat"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@id/cbWheels"
-        app:layout_constraintEnd_toEndOf="parent" />
+        style="@style/Widget.AppCompat.Button.Small"
+        android:text="Objednat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbWheels" />
 
     <ImageView
         android:id="@+id/ivOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@null"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/btnOrder"
-        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOrder"
 </androidx.constraintlayout.widget.ConstraintLayout>
