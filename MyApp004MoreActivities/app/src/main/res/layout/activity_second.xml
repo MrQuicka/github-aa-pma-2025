@@ -9,6 +9,18 @@
     android:padding="20dp"
     tools:context=".SecondActivity">
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text here" />
+
+    <Button
+        android:id="@+id/transferButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Transfer Text" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
