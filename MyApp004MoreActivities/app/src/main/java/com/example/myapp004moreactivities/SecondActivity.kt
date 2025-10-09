@@ -1,41 +1,38 @@
 package com.example.myapp004moreactivities
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.myapp004moreactivities.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivitySecondBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+        val text = intent.getStringExtra("extra_text")
+        binding.textInfo.text = text
 
-        val navController = findNavController(R.id.nav_host_fragment_content_second)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .setAnchorView(R.id.fab).show()
+        binding.transferButton.setOnClickListener {
+            val resultIntent = Intent()
+            resultIntent.putExtra("result_text", binding.editText.text.toString())
+            setResult(Activity.RESULT_OK, resultIntent)
+            finish()
         }
-    }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_second)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+        binding.button2.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            intent.putExtra("extra_text_from_second", binding.editText.text.toString())
+            startActivity(intent)
+        }
+
+        binding.button3.setOnClickListener {
+            finish()
+        }
     }
 }
