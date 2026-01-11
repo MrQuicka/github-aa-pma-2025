@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1027594926654",
+    "project_id": "pma1-4cc71",
+    "storage_bucket": "pma1-4cc71.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027594926654:android:4a8fc1ad8c0fe25889ef6f",
+        "android_client_info": {
+          "package_name": "com.example.myapp014asharedtasklist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVG9nQsaDQHWnamJswpmaOZmoPlqLwiQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
