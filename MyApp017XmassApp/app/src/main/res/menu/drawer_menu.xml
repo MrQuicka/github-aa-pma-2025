@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Domů" />
+    <item
+        android:id="@+id/adventCalendarFragment"
+        android:icon="@drawable/ic_calendar"
+        android:title="Adventní kalendář" />
+    <item
+        android:id="@+id/wishlistFragment"
+        android:icon="@drawable/ic_wishlist"
+        android:title="Wishlist" />
+    <item
+        android:id="@+id/planningFragment"
+        android:icon="@drawable/ic_planning"
+        android:title="Vánoční planning" />
+    <item
+        android:id="@+id/recipesFragment"
+        android:icon="@drawable/ic_recipes"
+        android:title="Recepty" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="Nastavení" />
+    <item
+        android:id="@+id/aboutFragment"
+        android:icon="@drawable/ic_about"
+        android:title="O aplikaci" />
+</menu>

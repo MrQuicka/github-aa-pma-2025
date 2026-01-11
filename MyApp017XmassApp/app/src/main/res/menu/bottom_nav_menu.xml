@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/adventCalendarFragment"
+        android:icon="@drawable/ic_calendar"
+        android:title="Kalendář" />
+    <item
+        android:id="@+id/planningFragment"
+        android:icon="@drawable/ic_planning"
+        android:title="Úkoly" />
+    <item
+        android:id="@+id/wishlistFragment"
+        android:icon="@drawable/ic_wishlist"
+        android:title="Wishlist" />
+</menu>
