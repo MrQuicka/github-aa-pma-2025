@@ -1,0 +1,37 @@
+package com.example.myapp011fittrack
+
+import android.content.Intent
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.DialogFragment
+
+class AddActivityDialogFragment : DialogFragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_add_activity_dialog, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<Button>(R.id.btn_add_workout).setOnClickListener {
+            startActivity(Intent(requireContext(), WorkoutDetailActivity::class.java))
+            dismiss()
+        }
+
+        view.findViewById<Button>(R.id.btn_add_meal).setOnClickListener {
+            startActivity(Intent(requireContext(), MealLogActivity::class.java))
+            dismiss()
+        }
+
+        view.findViewById<Button>(R.id.btn_cancel).setOnClickListener {
+            dismiss()
+        }
+    }
+}
