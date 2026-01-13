@@ -1366,8 +1366,6 @@ Připravil sis solidní aplikaci s čistou architekturou. Klíčem k úspěchu j
 
 **Pro-tip:** Když nevíš odpověď na otázku, zkus říct: "Tady jsem použil [technologii X], protože jsem viděl, že se to tak dělá v dokumentaci. Můžu to ale dál prozkoumat a vylepšit." To ukazuje, že jsi ochotný se učit.
 
----
 
-*Tento dokument vytvořil Claude Code pro přípravu na obhajobu semestrálního projektu FitTrack.*
 
 *Poslední aktualizace: 2026-01-12*
